@@ -53,6 +53,20 @@ async function updateLanguageSettings() {
 }
 
 // تحميل اللغة من ملف JSON
+async function loadLanguage() {
+    try {
+        const response = await fetch(`lang/${currentLang}.json`);
+        const translations = await response.json();
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.textContent = translations[key] || key;
+        });
+    } catch (error) {
+        console.error("Error loading language file:", error);
+    }
+}
+
+// تحميل المشاريع من ملف JSON
 async function loadProjects() {
     try {
         const response = await fetch(`products/${currentLang}-products.json`);
@@ -285,21 +299,6 @@ window.addEventListener('resize', () => {
         }
     });
 });
-async function loadLanguage() {
-    try {
-        const response = await fetch(`lang/${currentLang}.json`);
-        const translations = await response.json();
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            el.textContent = translations[key] || key;
-        });
-    } catch (error) {
-        console.error("Error loading language file:", error);
-    }
-}
-
-// تحميل المشاريع من ملف JSON
-
 
 // تأثير الفضاء (النجوم المتحركة)
 const canvas = document.getElementById('space');
@@ -479,4 +478,3 @@ function createPrayerAlert() {
 window.addEventListener('DOMContentLoaded', () => {
     createPrayerAlert();
 });
-
