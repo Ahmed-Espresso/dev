@@ -53,113 +53,116 @@ async function updateLanguageSettings() {
 }
 
 // تحميل اللغة من ملف JSON
-async function loadLanguage() {
-    try {
-        const response = await fetch(`lang/${currentLang}.json`);
-        const translations = await response.json();
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            el.textContent = translations[key] || key;
-        });
-    } catch (error) {
-        console.error("Error loading language file:", error);
-    }
-}
-
-// تحميل المشاريع من ملف JSON
 async function loadProjects() {
     try {
         const response = await fetch(`products/${currentLang}-products.json`);
         const projects = await response.json();
         const projectsContainer = document.querySelector('.projects-grid');
         projectsContainer.innerHTML = "";
-          
 
-        projects.forEach(project => {
+        projects.forEach((project, index) => {
             const projectCard = document.createElement('div');
             projectCard.className = 'project-card';
-           
-            // إضافة العناصر الجديدة داخل projectCard
+            
+            // إعدادات الأنيميشن الأولية
+            projectCard.style.opacity = '0';
+            projectCard.style.transform = 'translateY(30px)';
+            projectCard.style.transition = `
+                opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15}s,
+                transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${index * 0.15}s
+            `;
+
+            // العناصر الجانبية
             const edgeLeft = document.createElement('div');
             edgeLeft.className = 'edge-left';
             const edgeRight = document.createElement('div');
             edgeRight.className = 'edge-right';
+            projectCard.append(edgeLeft, edgeRight);
 
-            projectCard.appendChild(edgeLeft);
-            projectCard.appendChild(edgeRight);
-
-            // Media Container
+            // حاوية الوسائط
             const mediaContainer = document.createElement('div');
             mediaContainer.className = 'project-media';
             
-            // Carousel Container
+            // الكاروسيل
             const carouselContainer = document.createElement('div');
             carouselContainer.className = 'carousel-container';
-           
-
-            // Create Slides
-            project.images.forEach((image, index) => {
+            
+            // الشرائح
+            project.images.forEach((image, imgIndex) => {
                 const slide = document.createElement('div');
-                slide.className = `carousel-slide ${index === 0 ? 'active' : ''}`;
-                
+                slide.className = `carousel-slide ${imgIndex === 0 ? 'active' : ''}`;
                 const img = document.createElement('img');
                 img.src = image;
                 img.alt = project.title;
                 img.className = 'carousel-image';
-                
                 slide.appendChild(img);
                 carouselContainer.appendChild(slide);
             });
 
-            // Navigation Arrows
+            // عناصر التحكم
             const prevArrow = document.createElement('button');
             prevArrow.className = 'nav-arrow prev';
             prevArrow.innerHTML = '‹';
-
+            
             const nextArrow = document.createElement('button');
             nextArrow.className = 'nav-arrow next';
             nextArrow.innerHTML = '›';
-
-            // Dots Navigation
+            
             const dotsContainer = document.createElement('div');
             dotsContainer.className = 'carousel-controls';
-
-            project.images.forEach((_, index) => {
+            
+            project.images.forEach((_, dotIndex) => {
                 const dot = document.createElement('div');
-                dot.className = `carousel-dot ${index === 0 ? 'active' : ''}`;
+                dot.className = `carousel-dot ${dotIndex === 0 ? 'active' : ''}`;
                 dotsContainer.appendChild(dot);
             });
 
             mediaContainer.append(carouselContainer, prevArrow, nextArrow, dotsContainer);
 
-            // Content Container
+            // محتوى البطاقة
             const contentContainer = document.createElement('div');
             contentContainer.className = 'project-content';
-
+            
             const title = document.createElement('h3');
             title.className = 'project-title';
             title.textContent = project.title;
-
+            
             const description = document.createElement('p');
             description.className = 'project-description';
             description.textContent = project.description;
-
+            
             const link = document.createElement('a');
             link.className = 'project-link';
             link.href = project.links[0].url;
             link.target = '_blank';
             link.innerHTML = `
-               
                 <span>${project.links[0].text}</span>
-                 <i class="${project.links[0].icon}"></i>
+                <i class="${project.links[0].icon}"></i>
             `;
 
             contentContainer.append(title, description, link);
             projectCard.append(mediaContainer, contentContainer);
             projectsContainer.appendChild(projectCard);
 
-            // Initialize Carousel
+            // تهيئة الكاروسيل
             initializeCarousel(projectCard);
+
+            // مراقبة ظهور العنصر
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        projectCard.style.opacity = '1';
+                        projectCard.style.transform = 'translateY(0)';
+                        observer.unobserve(projectCard);
+                    }
+                });
+            }, { 
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            });
+            
+            observer.observe(projectCard);
         });
 
     } catch (error) {
@@ -169,8 +172,6 @@ async function loadProjects() {
     }
 }
 
-// تهيئة الكاروسيل
-// تعديل دالة initializeCarousel في script.js
 function initializeCarousel(projectCard) {
     const slides = projectCard.querySelectorAll('.carousel-slide');
     const dots = projectCard.querySelectorAll('.carousel-dot');
@@ -203,7 +204,7 @@ function initializeCarousel(projectCard) {
         clearInterval(autoPlayInterval);
     };
 
-    // Navigation Events
+    // أحداث التنقل
     const navigate = (direction) => {
         stopAutoPlay();
         updateSlide(currentIndex + direction);
@@ -213,7 +214,7 @@ function initializeCarousel(projectCard) {
     prevArrow.addEventListener('click', () => navigate(-1));
     nextArrow.addEventListener('click', () => navigate(1));
 
-    // Dot Navigation
+    // التنقل بالنقاط
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             stopAutoPlay();
@@ -222,40 +223,83 @@ function initializeCarousel(projectCard) {
         });
     });
 
-    // Swipe Handling
+    // السحب على الهاتف
     const hammer = new Hammer(projectCard.querySelector('.project-media'));
     hammer.on('swipeleft', () => navigate(1));
     hammer.on('swiperight', () => navigate(-1));
 
-    // Touch/Click Navigation
+    // التنقل بالنقر
     projectCard.querySelector('.project-media').addEventListener('click', (e) => {
         const rect = e.target.getBoundingClientRect();
         const x = e.clientX - rect.left;
         x > rect.width / 2 ? navigate(1) : navigate(-1);
     });
 
-    // Hover Handling
+    // إدارة حالة ال hover
     projectCard.querySelector('.project-media').addEventListener('mouseenter', () => {
         isHovered = true;
         stopAutoPlay();
+        projectCard.style.transition = 'none';
     });
     
     projectCard.querySelector('.project-media').addEventListener('mouseleave', () => {
         isHovered = false;
         startAutoPlay();
+        projectCard.style.transition = `
+            opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        `;
     });
 
-    // Start autoplay
+    // بدء التشغيل التلقائي
     startAutoPlay();
 
-    // Pause when window loses focus
+    // إدارة حالة النافذة
     window.addEventListener('blur', stopAutoPlay);
     window.addEventListener('focus', startAutoPlay);
 }
-// تحميل اللغة والمشاريع عند بدء التحميل
+
+// أحداث التحميل الأولية
 document.addEventListener('DOMContentLoaded', async () => {
     await updateLanguageSettings();
+    
+    // تفعيل الأنيميشن للعناصر المرئية مباشرة
+    setTimeout(() => {
+        document.querySelectorAll('.project-card').forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight * 1.2) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }, 500);
 });
+
+// إعادة حساب الأنيميشن عند تغيير الحجم
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top < window.innerHeight && card.style.opacity !== '1') {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
+    });
+});
+async function loadLanguage() {
+    try {
+        const response = await fetch(`lang/${currentLang}.json`);
+        const translations = await response.json();
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.textContent = translations[key] || key;
+        });
+    } catch (error) {
+        console.error("Error loading language file:", error);
+    }
+}
+
+// تحميل المشاريع من ملف JSON
+
 
 // تأثير الفضاء (النجوم المتحركة)
 const canvas = document.getElementById('space');
