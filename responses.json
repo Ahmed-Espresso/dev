@@ -1,0 +1,435 @@
+[
+  {
+    "messages": [
+      "من أنت",
+      "Who you",
+      "نفسك",
+      "Yourself",
+      "من نيرو",
+      "hola",
+      "انت مين",
+      "hellow",
+      "مين",
+      "welcome",
+      "من",
+      "hi",
+      "احمد اسبريسو",
+      "Ahmed Espresso",
+      "صنعك",
+      "hey",
+      "نيرو",
+      "Nero",
+      "ساعدني",
+      "Help"
+    ],
+    "response": {
+      "ar": "مرحباً، أنا نيرو، مساعدك الذكي. برمجني المطور أحمد اسبريسو، مطور ويب وتطبيقات أندرويد من مصر",
+      "en": "Hello, I am Nero, your smart assistant. I was programmed by developer Ahmed Espresso, a web & Android developer from Egypt."
+    }
+  },
+  {
+    "messages": [
+      "خدماتك",
+      "services",
+      "تقدم",
+      "Offer",
+      "موقع",
+      "Website",
+      "برنامج",
+      "Program",
+      "سعر",
+      "Price",
+      "بكام",
+      "How much",
+      "مجاني",
+      "Free",
+      "بتقدم",
+      "Offering",
+      "مجانا",
+      "For free",
+      "دومين",
+      "Domain",
+      "هوست",
+      "Host"
+    ],
+    "response": {
+      "ar": "خدماتي: إنشاء مواقع ويب متكاملة بسعر 50 دولار فقط. يشمل ذلك لوحة تحكم احترافية، قاعدة بيانات (فايربيز/سوبابيز)، نشر مجاني على GitHub، ومساحة تخزين تصل إلى 52 جيجا للصور و5 جيجا للملفات العرض المميز: موقع مع برنامج اندرويد ولوحة تحكم وبوت رد آلي بسعر 100 دولار فقط",
+      "en": "My services: Complete website development for only $50. This includes a professional control panel, a database (Firebase/Supabase), free hosting on GitHub, and storage up to 52 GB for images and 5 GB for files. Premium offer: a website with an Android app and control panel for only $100."
+    }
+  },
+  {
+    "messages": [
+      "عروض العيد",
+      "Eid Offer",
+      "خصم العيد",
+      "Eid Discount",
+      "عروض خاصة",
+      "Special Offers",
+      "خصم",
+      "Discount",
+      "العيد",
+      "Eid",
+      "عرض",
+      "Offer",
+      "عروض",
+      "Offers",
+      "ذهبيه",
+      "Golden",
+      "فرصه",
+      "Opportunity",
+      "تخفيضات",
+      "Discounts"
+    ],
+    "response": {
+      "ar": "عروض العيد ( خصم 50% ) : ( موقع ويب + لوحة تحكم + بوت رد آلي + نشر مجاني ) : فقط 25 دولار (بدلًا من 50 دولار)  باقة ذهبية ( موقع + برنامج أندرويد + لوحه تحكم + بوت رد آلي + نشر مجاني ) :  فقط 50 دولار ( بدلًا من 100 دولار )  فرصة ذهبيه حتى نهاية عيد الفطر المبارك ",
+      "en": "Eid offer (50% discount): (Website + Control Panel): Only $25 (instead of $50). Golden Package (Website + Android app + Control Panel): Only $50 (instead of $100). A golden opportunity Until the end of Eid al-Fitr ."
+    }
+  },
+  {
+    "messages": [
+      "النشر",
+      "Deployment",
+      "github",
+      "GitHub",
+      "امان",
+      "Security",
+      "جيتهب",
+      "GitHub",
+      "قاعده بيانات",
+      "Database",
+      "بيانات",
+      "Data",
+      "ببلاش",
+      "For free",
+      "خدمه مميزه",
+      "Special Service",
+      "استضافه",
+      "Hosting",
+      "استضافة",
+      "Host",
+      "ايه المميز",
+      "What's special",
+      "زياره",
+      "Visit",
+      "نشر",
+      "Deployment",
+      "جيجا",
+      "GB",
+      "المميز",
+      "Distinctive",
+      "لماذا",
+      "Why"
+    ],
+    "response": {
+      "ar": "لماذا خدماتي مميزة 😎 : أقدم نشرًا مجانيًا عبر جيتهب مع استضافة دائمة حتي 100الف زياره في الشهر ، سرعة فائقة وأمان عالي. مع قواعد بيانات مجانية بسعة 52 جيجا للصور و5 جيجا للملفات،  بالإضافة إلى تعديلات مجانية لمدة سنه",
+      "en": "Why are my services distinctive 😎: I offer free deployment via GitHub with permanent hosting for up to 100,000 visits per month, super-fast speed, and high security. Additionally, free databases with a capacity of 52 GB for images and 5 GB for files, along with free modifications for one year."
+    }
+  },
+  {
+    "messages": [
+      "الدفع",
+      "Payment",
+      "الشراء",
+      "Purchase",
+      "طلب",
+      "Order",
+      "تواصل",
+      "Contact",
+      "تقسيط",
+      "Installments",
+      "قسط",
+      "Installment",
+      "فاليو",
+      "valu",
+      "استلام",
+      "Receipt",
+      "كود",
+      "Code",
+      "خلال وقت",
+      "Within time",
+      "فتره",
+      "period",
+      "مده",
+      "Duration",
+      "وقت",
+      "Time"
+    ],
+    "response": {
+      "ar": "من قسم تواصل معي وايضا في قسم تواصل سريع تقدر تبعت مواصفات الموقع والبرنامج وهرد عليك في خلال 6 ساعات وتقدر تستلم المشروع خلال 2-3 أيام و الدفع بعد الاستلام وتجربه الموقع وايضا متاح التقسيط من خلال فاليو او اي برنامج تقسيط ملاحظة كل المشاريع تشمل: ضمان استرداد الأموال وتعديلات مجانية في اي وقت لمده سنه وايضا ملفات المشروع كامل ( كود المصدر )",
+      "en": "From the 'Contact Me' section, as well as the Quick Contact section, you can send the specifications for the website and program, and I will respond within 6 hours. You can receive the project within 2-3 days, with payment after delivery and testing of the site. Installments are also available through Valyou or any installment program. Note: All projects include a money-back guarantee, free modifications at any time for one year, and full project files (source code)."
+    }
+  },
+  {
+    "messages": [
+      "مقارنه",
+      "Comparison",
+      "اختارك",
+      "Selection",
+      "مقارنة",
+      "Comparison",
+      "قارن",
+      "Compare",
+      "خبره",
+      "Experience",
+      "جوده",
+      "Quality"
+    ],
+    "response": {
+      "ar": "مقارنة سريعة لتفوق خدماتي: السعر: أرخص 70% من المنافسين. الجودة: أكواد نظيفة وسريعه. الدعم: متابعه دائده وتعديل في اي وقت. الخبرة: أكثر من 30 مشروع ناجح وخبره 5 سنين في تطوير الويب. الضمان: استرجاع أموالك إذا لم تعجبك النتيجة .لا تضيع الفرصة ❤🌹",
+      "en": "A quick comparison highlighting the superiority of my services: Price: 70% cheaper than competitors. Quality: Clean and fast code. Support: Continuous follow-up and modifications at any time. Experience: Over 30 successful projects and 5 years of web development experience. Guarantee: Money-back if you are not satisfied with the result. Don't miss the opportunity ❤🌹."
+    }
+  },
+  {
+    "messages": [
+      "بورتفوليو",
+      "Portfolio",
+      "أعمال سابقة",
+      "Previous Work",
+      "أعمالك",
+      "Your Work",
+      "مشاريع",
+      "Projects",
+      "لوحه تحكم",
+      "Control Panel",
+      "تحكم",
+      "Control",
+      "سابقة",
+      "Previous"
+    ],
+    "response": {
+      "ar": "تميزت مشاريعنا السابقة بابتكار مواقع ويب متكاملة لمشاريع متوسطة تشمل السوبرماركت، المتجر الإلكتروني، التسويق الرقمي، محلات الملابس والأزياء، الصيدليات، المطاعم، المعارض والبورتفوليو، مدعومة ببرمجة روبوت الرد الآلي ولوحة تحكم متطورة وسهله الاستخدام تتيح إضافة وتعديل وحذف الأقسام والمنتجات وتعديل اسعارها واضافه العروض والخصومات ، مما يجعل لمالك الموقع تحكم كامل في المشروع.",
+      "en": "Our previous projects have been distinguished by creating comprehensive websites for medium-scale ventures, including supermarkets, e-commerce stores, digital marketing, clothing and fashion shops, pharmacies, restaurants, exhibitions, and portfolios. They are supported by a response bot and an advanced, user-friendly control panel that allows adding, editing, and deleting sections and products, adjusting prices, and adding offers and discounts, giving the website owner full control over the project."
+    }
+  },
+   {
+    "messages": [
+      "بوت",
+      "Bot",
+      "رد الي",
+      "automated response ",
+      "روبوت",
+      "Discount bot?",
+      "رد",
+      "robot"
+    ],
+    "response": {
+      "ar": "يمكنك اضافه روبوت (بوت) رد آلي في موقعك بسعر 10$ دولار فقط ( تخفيض 90% من السعر الأصلي ), يتحدث بلعربي والانجليزي ويمكن اضافه المزيد من اللغات حسب الطلب وايضا ردود خاصه يحددها المستخدم لتجاوب علي جميع استفسارات زوار الموقع بشكل سهل وسريع",
+      "en": "You can add an automated response bot to your website for only $10 (a 90% discount from the original price). It speaks Arabic and English, and additional languages can be added upon request. It also provides custom responses set by the user to answer all inquiries from website visitors quickly and easily."
+    }
+  },
+  {
+    "messages": [
+      "سعر البوت",
+      "bot cost",
+      "تلقائي ردود",
+      "Automatic respons",
+      "فوائد البوت",
+      "Benefits bot ",
+      "اساله",
+      "technical details bot"
+    ],
+    "response": {
+      "ar": "كيف يحول البوت زوارك إلى عملاء ، يقلل الوقت ، ويرد علي 95% من الاسأله تلقائيا في 3 ثواني, يزيد تفاعل العملاء بنسبة 200%, يحول 30% من المحادثات إلى مبيعات, يوفر 20 ساعة عمل أسبوعيًا لفريقك, مثال: إذا كان موقعك يستقبل 100 زائر يوميًا، سيولد البوت 15-20 فرصة بيع يوميًا السعر: 10$ دولار مقابل أرباح محتملة بآلاف",
+      "en": "The bot converts your visitors into customers by reducing wait times and automatically responding to 95% of inquiries in 3 seconds, increasing customer engagement by 200%, converting 30% of conversations into sales, and saving your team 20 work hours per week. For example, if your website receives 100 visitors daily, the bot will generate 15-20 sales opportunities per day. Price: $10, with potential profits in the thousands."
+    }
+  },
+  {
+    "messages": [
+      "لازمه الموقع",
+      "Necessity of the website",
+      "ما فائدة الموقع",
+      "What is the benefit of the website?",
+      "فوائد الموقع",
+      "Website benefits",
+      "ارباح",
+      "Profits",
+      "دعايه",
+      "Promotion",
+      "اليكتروني",
+      "Electronic",
+      "تقليل التكاليف",
+      "Reducing marketing costs",
+      "اعلان",
+      "Advertisement",
+      "عائد",
+      "Return",
+      "ربح",
+      "Profit"
+    ],
+    "response": {
+      "ar": "الموقع الإلكتروني أداة أساسية لنمو عملك، حيث يعمل على جذب العملاء على مدار الساعة وزيادة مصداقيتك (84% من العملاء يثقون بالشركات التي تمتلك موقعاً إلكترونياً)، وتقليل تكاليف التسويق التقليدي عبر تحسين محركات البحث، كما يرفع من المبيعات عبر التفاعل المباشر مع العملاء ويمكّنك من إطلاق عروض خاصة ومتابعة النتائج بشكل فوري. احصل على موقع احترافي بسعر 25 دولار بدلاً من 50 دولار مع نشر مجاني وقاعدة بيانات",
+      "en": "A website is an essential tool for growing your business, as it works around the clock to attract customers and enhance your credibility (84% of customers trust businesses with a website). It reduces traditional marketing costs through search engine optimization, boosts sales through direct customer engagement, and enables you to launch special offers and monitor results in real time. Get a professional website for $25 instead of $50, including free hosting and a database."
+    }
+  },
+  {
+    "messages": [
+      "مشروعي صغير",
+      "My project is small",
+      "صغير",
+      "Small",
+      "محل صغير",
+      "Small shop",
+      "ضعيف",
+      "Weak",
+      "بسيط",
+      "Simple",
+      "ناشئ",
+      "Emerging"
+    ],
+    "response": {
+      "ar": "حتى الأعمال الصغيرة يمكن أن تحقق أرباحاً كبيرة من خلال الموقع الإلكتروني. على سبيل المثال، محل حلويات صغير في القاهرة شهد زيادة بنسبة 150% في مبيعات التوصيل و300% في تفاعل وسائل التواصل الاجتماعي بعد إطلاق الموقع. تشمل المزايا تصميم سريع خلال 24 ساعة، نطاق مجاني (yourname.github.io)، دمج مع واتساب للطلبات السريعة، وإدارة محتوى سهلة دون الحاجة لخبرة تقنية. العرض الخاص: موقع متكامل مع لوحة تحكم بسعر 25$ دولار فقط (توفير 85%)",
+      "en": "Even small businesses can achieve significant profits with a website. For example, a small bakery in Cairo experienced a 150% increase in delivery sales and a 300% boost in social media engagement after launching its website. Benefits include a fast design within 24 hours, a free domain (yourname.github.io), WhatsApp integration for quick orders, and easy content management without requiring technical expertise. Special offer: A complete website with a control panel for only $25 (85% saving)."
+    }
+  },
+  {
+    "messages": [
+      "تسويق",
+      "Marketing",
+      "ترويج",
+      "Promotion",
+      "محركات البحث مبالغ اعلانات",
+      "Search engines and advertising budgets"
+    ],
+    "response": {
+      "ar": "الموقع الإلكتروني يعد وسيلة تسويقية قوية تحول استراتيجيات التسويق التقليدية؛ فهو يعزز ظهور علامتك التجارية في محركات البحث ويستهدف العملاء بدقة دون الحاجة إلى إنفاق مبالغ طائلة على الإعلانات، مما يوفر الوقت والجهد ويخفض بشكل ملحوظ من تكاليف التسويق، بالإضافة إلى تواصله المستمر مع العملاء على مدار الساعة لتعزيز المبيعات وتحقيق عوائد مالية مجزية",
+      "en": "A website is a powerful marketing tool that transforms traditional marketing strategies. It enhances your brand’s visibility on search engines and precisely targets customers without the need to spend huge amounts on advertisements. This saves time and effort while significantly reducing marketing costs, and it maintains continuous customer engagement to boost sales and generate impressive financial returns."
+    }
+  },
+  {
+    "messages": [
+      "العمل بدون",
+      "Operating without",
+      "اشتري",
+      "Buy",
+      "بديل",
+      "Alternative",
+      "احصائيات",
+      "Statistics",
+      "احصاء",
+      "Statistic",
+      "فايده",
+      "Benefit"
+    ],
+    "response": {
+      "ar": "العمل بدون موقع يشبه وجود متجر بلا لافتة، أو هاتف بلا رقم، أو سيرة ذاتية بلا خبرة. إذ أن 97% من العملاء يبحثون على الإنترنت قبل الشراء، والأعمال بدون موقع تفقد حوالي 80% من العملاء المحتملين. لذلك، لا تكن جزءاً من هذه الإحصائيات السلبية. ابدأ بموقعك الآن مقابل 25 دولاراً واستقبل أول 100 زائر خلال أسبوع",
+      "en": "Operating without a website is like having a store without a sign, a phone without a number, or a resume without experience. In fact, 97% of customers search online before making a purchase, and businesses without a website lose about 80% of potential customers. Therefore, don’t be part of these negative statistics. Start your website now for $25 and receive your first 100 visitors within a week."
+    }
+  },
+  {
+    "messages": [
+      "اهلا",
+      "Hello",
+      "مرحب",
+            "كيفك",
+            "اخبارك",
+            "ازيك",   
+            "هاي",
+            "مرحبا",
+            "شلونك",
+            "هلو",  
+            "hi",
+            "أهلا",
+      "Welcome"
+    ],
+    "response": {
+      "ar": "يا أهلا وسهلا! ✨ نورتني في مملكتي الرقمية! أنا نيرو، المساعد الذكي، جاهز أرشدك في رحلتك داخل الموقع وأوريك كل حاجة بطريقة ممتعة وسهله، خليك معايا واستعد تكتشف حاجات مميزة، حديثة، ونادرة مش هتلاقيها في أي مكان تاني! 🚀😎",
+      "en": "Welcome! ✨ You've lit up my digital kingdom! I'm Niro, your smart assistant, ready to guide you through our website in a fun, effortless way. Stick with me and get ready to discover unique, modern, and rare treasures you won't find anywhere else! 🚀😎"
+    }
+  },
+  {
+    "messages": [
+      "صباح الخير",
+      "Good morning",
+      "صباح",
+      "Have a great day"
+    ],
+    "response": {
+      "ar": "صباح الخير، نتمنى لكم يومًا مليئًا بالنشاط والإبداع والنجاح.",
+      "en": "Good morning, we wish you a day full of energy, creativity, and success."
+    }
+  },
+  {
+    "messages": [
+      "مساء الخير",
+      "Good evening",
+      "مساء",
+      "Have a pleasant evening"
+    ],
+    "response": {
+      "ar": "مساء الخير، نتمنى لكم أمسية هادئة وممتعة مع أحبابكم.",
+      "en": "Good evening, we wish you a calm and enjoyable evening with your loved ones."
+    }
+  },
+  {
+    "messages": [
+      "تحية",
+      "Kind regards",
+      "أطيب التحيات",
+      "Best regards"
+    ],
+    "response": {
+      "ar": "تحية طيبة لكم، نسعى دائماً لتقديم الأفضل ونأمل أن تكون تجربتكم معنا مميزة.",
+      "en": "Kind regards to you all. We always strive to deliver excellence and hope your experience with us is exceptional."
+    }
+  },
+  {
+    "messages": [
+      "حالك",
+      "How are you?",
+      "أخبارك",
+      "How's it going?"
+    ],
+    "response": {
+      "ar": "الحمدلله نأمل أن تكون في أفضل حال. نحن هنا دائمًا لدعمك وتقديم المساعدة.",
+      "en": "How are you? We hope you are doing well. We're always here to support and assist you."
+    }
+  },
+  {
+    "messages": [
+      "أهلاً بكم هاي",
+      "Welcome everyone",
+      "هلا",
+      "Greetings to all"
+    ],
+    "response": {
+      "ar": "أهلاً بكم في مجتمعنا الرقمي، حيث نلتقي لنتبادل الأفكار ونبني معًا مستقبلًا مشرقًا.",
+      "en": "Welcome to our digital community, where we come together to exchange ideas and build a bright future."
+    }
+  },
+  {
+    "messages": [
+      "تشرفنا برؤيتك",
+      "It's an honor to see you",
+      "تشرفنا بزيارتك",
+      "Honored by your presence"
+    ],
+    "response": {
+      "ar": "تشرفنا برؤيتك، ونأمل أن تجد كل ما يلبي احتياجاتك في منصتنا.",
+      "en": "It's an honor to see you, and we hope you find everything that meets your needs on our platform."
+    }
+  },
+  {
+    "messages": [
+      "مرحباً بكم جميعاً",
+      "Hello everyone",
+      "أهلاً بالجميع",
+      "Greetings everyone"
+    ],
+    "response": {
+      "ar": "مرحباً بكم جميعاً، نتطلع لاستقبال استفساراتكم ومشاركتكم الأفكار والمقترحات.",
+      "en": "Hello everyone, we look forward to receiving your inquiries and sharing ideas and suggestions."
+    }
+  },
+  {
+    "messages": [
+      "أهلاً وسهلاً",
+      "Warm welcome",
+      "أهلاً وسهلاً بكم",
+      "Heartfelt welcome"
+    ],
+    "response": {
+      "ar": "أهلاً وسهلاً بكم في منصتنا؛ نحن هنا لنقدم لكم الدعم والخدمات المميزة على مدار الساعة.",
+      "en": "A warm welcome to our platform; we are here to provide you with exceptional support and services around the clock."
+    }
+}
+]

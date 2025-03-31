@@ -1,0 +1,595 @@
+/* ----------- أجهزة كبيرة (721px - 1024px) ----------- */
+@media (min-width: 721px) and (max-width: 1024px) {
+  html { font-size: 16px; }
+  
+  body { padding: 1.5rem; }
+  
+  /* تحسين التصميم للعرض الأفقي */
+  .nav-links { gap: 1.2rem; }
+  
+  .project-card {
+    min-height: 500px;
+    margin: 0 2rem;
+  }
+  
+  .project-title { font-size: 2.4rem !important; }
+  
+  
+  .chat-box { height: 450px; }
+}
+
+/* ----------- شاشات كمبيوتر (1025px فما فوق) ----------- */
+@media (min-width: 1025px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  h1 { font-size: 3.2rem; }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+  
+  .project-card {
+    min-height: 550px;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+}
+
+/* ----------- iPhone 16 Pro Max (عرض خاص) ----------- */
+@media only screen 
+  and (device-width: 430px) 
+  and (device-height: 932px) 
+  and (-webkit-device-pixel-ratio: 3) {
+    html { font-size: 15px; }
+    
+    .project-card {
+      min-height: 480px;
+      margin: 0 1rem;
+    }
+    
+    .chat-box { height: 380px; }
+}
+
+/* ----------- شاشات عالية الدقة (2x) ----------- */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) { 
+  .project-image img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  .nav-links a {
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+}
+
+/* ----------- الوضع الأفقي ----------- */
+@media (orientation: landscape) {
+  .welcome-card { padding: 2rem 4rem; }
+  
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .chat-container {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
+
+/* ----------- شاشات عريضة (16:9) ----------- */
+@media (min-aspect-ratio: 16/9) {
+  .home-section {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .scroll-sec {
+    padding: 2rem 10%;
+  }
+}
+
+
+
+@media (min-width: 481px) and (max-width: 720px) and (orientation: portrait) {
+  html {
+    font-size: 15px;
+  }
+  body {
+    padding: 0.8rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    margin-top: 2rem;
+    padding: 0 1rem;
+  }
+  section {
+    padding: 1.5rem;
+  }
+
+  nav {
+    height: 5.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .nav-links {
+    gap: 0.5rem;
+  }
+  .nav-links a, .nav-links .btn {
+    font-size: 1.3rem;
+    padding: 2.2rem 1.6rem;
+    height: 3.8rem;
+  }
+
+  .welcome-card {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .welcome-card h1 {
+    margin: 2rem auto;
+    font-size: 2rem;
+  }
+
+  .scroll-sec {
+    padding: 0.5rem;
+  }
+  #projects-scroll {
+    gap: 0.8rem;
+  }
+  .project-item {
+    height: 85px;
+    padding: 8px;
+  }
+  .project-item img {
+    width: 60px;
+    height: 60px;
+  }
+  .project-item span {
+    font-size: 1.5rem;
+  }
+
+  .project-display {
+    margin: 1.5rem 4rem;
+  }
+  .project-images {
+    padding: 8px 0;
+  }
+  .project-image img {
+    padding: 12px;
+  }
+
+  .scroll-content h2 {
+    font-size: 2rem;
+  }
+  .scroll-content p {
+    font-size: 1.4rem;
+  }
+  .scroll-content a {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
+  .chat-box {
+    height: 400px;
+  }
+  .message {
+    max-width: 80%;
+    padding: 10px 15px;
+  }
+  .chat-input {
+    font-size: 14px;
+    padding: 12px 25px;
+  }
+  .send-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .skill {
+    padding: 4px;
+  }
+
+  .quick-btn button {
+    padding: 1rem 2rem;
+  }
+
+  .stats-grid {
+ 
+  }
+
+  .projects-grid {
+    gap: 2rem;
+    padding: 1.5rem;
+  }
+  .project-card {
+    min-height: 450px;
+    margin: 0 1rem;
+  }
+  .project-media {
+    margin-bottom: 1.5rem;
+  }
+  .project-title {
+    font-size: 2.2rem !important;
+  }
+  .project-description {
+    font-size: 1.6rem;
+    max-height: 100px;
+  }
+  .project-card:hover .project-description {
+    max-height: 180px;
+  }
+  .project-link {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+
+}
+
+
+
+
+@media only screen and (max-width: 480px) and (orientation: portrait) {
+html {
+  font-size: 14px;
+}
+body {
+  padding: 0.5rem;
+}
+/* تنسيق عناوين الأقسام */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+/* العناوين */
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+main {
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
+}
+section {
+  padding: 1rem;
+  margin: 0 auto;
+}
+section h1 {
+  font-size:2rem ;
+  font-weight: bold;
+  margin: 2rem auto;
+}
+nav {
+  height: 4.9rem;
+  padding: 0.3rem 0.7rem;
+}
+.nav-links {
+  gap:0.3rem;
+}
+.nav-links a, .nav-links .btn {
+  font-size: 1.2rem;
+  padding: 2rem 1.4rem;
+  height: 3.4rem;
+}
+/* بطاقة الترحيب */
+.welcome-card {
+  padding : 1rem;
+  margin: 0.2rem auto;
+}
+.welcome-card h1 {
+ 
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  
+}
+.ramadan-card {
+  padding: 0.3rem;
+  margin:;
+}
+
+.ramadan-card h1 {
+  font-size:1.4rem ;
+}
+ 
+.ramadan-card p {
+  font-size:1.2rem ;
+}
+.discount {
+  font-size: 1.1rem;
+}
+.time-block{
+font-size: 1rem;
+ }
+
+  .time-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* يمكن تعديل حجم الخط أيضاً لضمان ظهور النصوص بشكل مناسب */
+  #offer-days, #offer-hours, #offer-minutes {
+    font-size: 2.2rem;
+  }
+  
+  .time-label {
+    font-size: 1.5rem;
+  
+  }
+
+
+
+/* المشاريع السكرول*/
+.scroll-sec {
+  padding: 0;
+}
+#projects-scroll {
+  gap: 0.5rem;
+}
+.project-item {
+  height: 70px;
+  padding: 5px;
+}
+.project-item img {
+  width: 50px;
+  height: 50px;
+}
+.project-item span{
+  font-size:1.4rem;
+  font-weight:bold;
+}
+.project-display {
+  margin: 1rem 3rem;
+  padding:0 ;
+  border-radius: 15px;
+}
+.project-images {
+  height: auto;
+  border-radius: 15px;
+  margin-bottom:0;
+  padding:5px 0;
+  position:relative;
+  overflow:hidden;
+}
+.project-image img {
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom:0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
+  border-radius: 15px;
+}
+.scroll-content {
+  padding: 0 0.5rem;
+  gap:5px;
+  overflow:hidden;
+  margin:auto;
+}
+.scroll-content h2 {
+  font-size: 1.8rem;
+  margin:  0;
+  padding: 0 ;
+}
+.scroll-content p {
+  font-size: 1.3rem;
+  padding: 0 auto;
+}
+.scroll-content a {
+  padding: 0.8rem 2rem;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+
+/* الشات بوت */
+.chat-container {
+  padding: 1rem;
+}
+
+.chat-box {
+  height: 350px;
+}
+.message {
+  max-width: 85%;
+  padding: 8px 12px;
+}
+.chat-input {
+  font-size: 13px;
+  padding: 10 20px;
+  width:97%;
+}
+.send-btn {
+  padding: 8px 18px;
+  font-size: 13px;
+  width:25%;
+}
+#voice-btn {
+  left: 25px;
+  font-size: 1em;
+}
+.message.user {
+ 
+}
+.message.bot {
+
+}
+.message.bot .examples {
+
+}
+.message.bot .examples a {
+
+}
+
+/* الاساله الشائعه */
+.faq-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+/* تعديلات عناصر الأسئلة */
+.faq-item {
+  min-height: auto;
+  aspect-ratio: 1;
+  border-width: 1.5px;
+  font-size: 1.3rem;
+}
+/* تعديلات الأزرار */
+.faq-btn {
+  font-size: 0.8rem;
+  padding: 5px;
+}
+.faq-btn i {
+  font-size: 1.2rem;
+}
+/* تحسينات حاوية الإجابة */
+.answer-container {
+  
+  font-size:1.5rem ; 
+  display: inline-block;
+}
+/* المهارات */
+
+.container {
+  grid-template-columns: repeat(auto-fit, minmax(90px, 3fr));
+  gap: 0.7rem;
+  width:100%
+}
+.skill {
+  padding:2px;
+  width:100%;
+}
+
+/* التواصل السريع */
+.quick-sec {
+  padding: 1rem;
+}
+.quick-btn button {
+  padding: 0.8rem 1.5rem;
+}
+/* الإحصائيات */
+.stats-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.stat-card {
+  padding: 3px;
+  gap:10px;
+}
+/* المشاريع الاساسيه */
+.projects-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+/* تحسينات بطاقات المشاريع للشاشات الصغيرة */
+.project-card {
+  min-height: 420px;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0 0.5rem;
+}
+/* تعديلات حجم الوسائط ونسبتها */
+.project-media {
+  aspect-ratio: 16/9;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+/* تحسينات المحتوى النصي */
+.project-content {
+  padding: 1rem;
+  margin-top: -40px;
+}
+.project-title {
+  font-size: 2rem !important;
+  margin-bottom: 0.4rem;
+}
+.project-description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  max-height: 80px;
+}
+.project-card:hover .project-description {
+  max-height: 150px;
+}
+/* تحسينات الأزرار للشاشات الصغيرة */
+.project-link {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  width: 75%;
+  justify-content: center;
+}
+/* تحسينات التحكم في الكاروسيل */
+.nav-arrow {
+  width: 30px;
+  height: 30px;
+  font-size: 0.8rem;
+}
+.nav-arrow.prev { right: 8px; }
+.nav-arrow.next { left: 8px; }
+.carousel-controls {
+  bottom: 12px;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+}
+/* تحسينات النص الطويل */
+.project-description {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* قسم الخدمات */
+.service-card h2 {
+ font-size: 1.9rem;
+
+}
+/* وصف الخدمة */
+.service-card p {
+ font-size: 1.5rem;
+
+}
+.service-card i {
+  font-size: 3.5rem;
+}
+
+/* التواصل */
+.contact-info {
+  grid-template-columns: repeat(3, 1fr);
+  gap:3px;
+  letter-spacing:1px;
+}
+.contact-item {
+  font-size:1.8rem;
+  font-weight:bold;
+}
+.contact-item a  {
+  font-size: 0.6rem;
+  font-weight:bold;
+}
+
+}

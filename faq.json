@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "question": "faq_website_importance",
+    "answer": "faq_website_importance_answer",
+    "color": "#3B82F6",
+    "icon": "fas fa-globe"
+  },
+  {
+    "id": 2,
+    "question": "faq_free_hosting",
+    "answer": "faq_free_hosting_answer",
+    "color": "#10B981",
+    "icon": "fas fa-server"
+  },
+  {
+    "id": 3,
+    "question": "faq_cordova_app",
+    "answer": "faq_cordova_app_answer",
+    "color": "#F59E0B",
+    "icon": "fas fa-mobile-alt"
+  },
+  {
+    "id": 4,
+    "question": "faq_github_pages",
+    "answer": "faq_github_pages_answer",
+    "color": "#EF4444",
+    "icon": "fab fa-github"
+  },
+  {
+    "id": 5,
+    "question": "faq_firebase_supabase",
+    "answer": "faq_firebase_supabase_answer",
+    "color": "#6366F1",
+    "icon": "fas fa-database"
+  },
+  {
+    "id": 6,
+    "question": "faq_admin_panel",
+    "answer": "faq_admin_panel_answer",
+    "color": "#8B5CF6",
+    "icon": "fas fa-tools"
+  },
+  {
+    "id": 7,
+    "question": "faq_no_domain_needed",
+    "answer": "faq_no_domain_needed_answer",
+    "color": "#14B8A6",
+    "icon": "fas fa-globe"
+  },
+  {
+    "id": 8,
+    "question": "faq_tech_advantages",
+    "answer": "faq_tech_advantages_answer",
+    "color": "#EC4899",
+    "icon": "fas fa-lightbulb"
+  },
+  {
+    "id": 9,
+    "question": "faq_portfolio_value",
+    "answer": "faq_portfolio_value_answer",
+    "color": "#22C55E",
+    "icon": "fas fa-chart-line"
+  }
+]

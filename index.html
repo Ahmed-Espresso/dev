@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحمد إسبريسو | مطور ويب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" id="lemon-theme" href="lemon-theme.css">
+    <style>
+    body.preload {
+        transition: none !important;
+        }
+    </style>
+   
+</head>
+
+<body>
+
+    <canvas id="space"></canvas>
+    <canvas id="lemon-canvas"></canvas>
+    <header>
+        <nav>
+            <div >
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                    <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                    <li><a href="services.html" data-i18n="services">الخدمات</a></li>
+                    <li><a href="aboutme.html" data-i18n="aboutme">من أنا</a></li>
+                    <li><a href="contact.html" data-i18n="contact">تواصل معي</a></li>
+
+                    <div class="controls">
+                        <button id="language-toggle" class="btn">en</button>
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="theme-toggle" class="btn">🌙</button>  
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+<main id="home">
+    <section class="home-sec">
+        <div>
+
+            <div class="welcome-card">
+                <h1>
+                     <div id="typing-container" data-i18n="welcome-me"></div>
+                </h1>
+            </div>
+            
+          
+            <div class="ramadan-card">
+                <h1 data-i18n="ramadan"></h1>
+                <p data-i18n="ard"></p>
+                <span class="discount" data-i18n="dis"></span><br>
+                <div class="offer-countdown">
+                  <div class="offer-header" data-i18n="offer_header"></div>
+                  <div class="time-block">
+
+                    <div class="time-item">
+                      <span id="offer-days">00</span>
+                      <span class="time-label" data-i18n="days"></span>
+                    </div>
+                    
+                    <span class="separator">:</span>
+                    <div class="time-item">
+                      <span id="offer-hours">00</span>
+                      <span class="time-label" data-i18n="hours"></span>
+                    </div>
+
+                    <span class="separator">:</span>
+                    <div class="time-item">
+                      <span id="offer-minutes">00</span>
+                      <span class="time-label" data-i18n="minutes"></span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              
+        </div>
+    </section>
+
+
+    <section class="scroll-sec">
+
+        <div  class="scroll-sec-h1">
+            <h1 data-i18n="nzra">نظره سريعه</h1>
+        <div>
+
+        <div id="projects-scroll" class="projects-scroll"></div>
+        <div id="project-display" class="project-display"></div>
+
+    </section>
+
+    <section class="bot-sec">
+
+        <div  class="bot-sec-h1">
+            <h1 data-i18n="msad">المساعد</h1>
+        <div>
+ 
+        <div class="chat-container">
+
+            <div class="edge-left"></div>
+            <div class="edge-right"></div>
+
+            <span id="bot-name" data-i18n="bot_name">نيرو</span>
+
+            <div class="chat-box" id="chatBox"></div>
+
+                <div class="chat-footer">
+                    <div class="input-container">
+
+                        <input  type="text" id="userInput" class="chat-input"  data-i18n="botholder" placeholder="اكتب رسالة...">
+                        <button id="voice-btn"><i class="fas fa-microphone"></i></button>
+
+                    </div>
+                        <button onclick="sendMessage()" class="send-btn" data-i18n="sendbtn"></button>
+                </div>
+        </div>
+
+    </section>
+
+<!-- أضف هذا في قسم HTML حيث تريد عرض الأسئلة -->
+<section class="collection-sec">
+    <div class="custom-container">
+        <h1 class="section-title" data-i18n="faq_title"></h1>
+        <div class="faq-grid" id="faqGrid"></div>
+        <div class="answer-container" id="answerBox">
+          
+                <div class="answer-content" data-i18n="select_question"></div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class=" class="skills-sec"">
+
+        <div  class="skills-sec-h1">
+            <h1 data-i18n="skills">المهارات</h1>
+        <div>
+   
+        <div class="container">
+        
+            <div class="skill" data-skill="javascript">
+                <i class="fab fa-js"></i>
+                <span class="skill-name" data-i18n="javascript">JavaScript</span>
+
+                <div class="skill-bar">
+                        <div class="skill-level" style="width: 75%; background-color: #f0db4f;">
+                            <span class="skill-percent">75%</span>
+                        </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="html">
+                <i class="fab fa-html5"></i>
+                <span class="skill-name" data-i18n="html">HTML</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%; background-color: #e34c26;">
+                        <span class="skill-percent">90%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="css">
+                <i class="fab fa-css3-alt"></i>
+                <span class="skill-name" data-i18n="css">CSS</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%; background-color: #264de4;">
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="react">
+                <i class="fab fa-react"></i>
+                <span class="skill-name" data-i18n="react">React</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%; background-color: #61dbfb;">
+                        <span class="skill-percent">70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="nodejs">
+                <i class="fab fa-node-js"></i>
+                <span class="skill-name" data-i18n="nodejs">Node.js</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 65%; background-color: #68a063;">
+                        <span class="skill-percent">65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="php">
+                <i class="fab fa-php"></i>
+                <span class="skill-name" data-i18n="php">PHP</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 60%; background-color: #777BB3;">
+                        <span class="skill-percent">60%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="linux">
+                <i class="fab fa-linux"></i>
+                <span class="skill-name" data-i18n="linux">Linux</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%; background-color: #FCC624;">
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="github">
+                <i class="fab fa-github"></i>
+                <span class="skill-name" data-i18n="github">GitHub</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 76%; background-color: #6e5494;">
+                        <span class="skill-percent">76%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="sql">
+                <i class="fas fa-database"></i>
+                <span class="skill-name" data-i18n="sql">SQL</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 74%; background-color: #00758F;">
+                        <span class="skill-percent">74%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="bootstrap">
+                <i class="fab fa-bootstrap"></i>
+                <span class="skill-name" data-i18n="bootstrap">Bootstrap</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%; background-color: #563D7C;">
+                        <span class="skill-percent">85%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="tailwind">
+                <i class="fas fa-wind"></i>
+                <span class="skill-name" data-i18n="tailwind">Tailwind CSS</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%; background-color: #38B2AC;">
+                        <span class="skill-percent">80%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill" data-skill="cordova">
+                <i class="fas fa-mobile-alt"></i>
+                <span class="skill-name" data-i18n="cordova">Cordova</span>
+
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 70%; background-color: #E6710A;">
+                        <span class="skill-percent">70%</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section  class="quick-sec">
+        <div  class="quick-sec-h1">
+            <h1 data-i18n="quick-contact">تواصل معي</h1>
+        <div>
+
+        <div class="container">
+
+            <form id="quick-contact-form">
+
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="اسمك" data-i18n="namesmall" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="بريدك الإلكتروني" data-i18n="emailsmall" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="رسالتك" data-i18n="messagesmall" required></textarea>
+                </div>
+
+                <div class="quick-btn">
+
+                    <button data-i18n="btnw" type="submit" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        <span ></span>
+                    </button>
+
+                    <button data-i18n="btne" type="button" class="gmail-btn" id="send-email">
+                        <i class="fab fa-google"></i>
+                        <span ></span>
+                    </button>
+                </div>
+
+                
+                
+            </form>
+
+        </div>
+    </section>
+
+
+    <section  class="statistics-sec">
+
+        <div class="statistics-sec-h1">
+            <h1 data-i18n="statistics">الإحصائيات</h1>
+        <div>
+
+        <div class="container">
+       
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <h2 data-i18n="projects-completed">مشروع مكتمل</h2>
+                    <p data-i18n="projects-count">50+</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 data-i18n="happy-clients">عميل سعيد</h2>
+                    <p data-i18n="clients-count">30+</p>
+                </div>
+
+                <div class="stat-card">
+                    <h2 data-i18n="years-experience">سنوات الخبرة</h2>
+                    <p data-i18n="experience-count">5+</p>
+                </div>
+           
+            </div>
+        </div>
+    </section>
+</main>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsScroll = document.getElementById('projects-scroll');
+    const projectDisplay = document.getElementById('project-display');
+    const languageToggle = document.getElementById('language-toggle');
+    const themeToggle = document.getElementById('theme-toggle');
+
+    // تهيئة الإعدادات الأولية
+    let currentLanguage = localStorage.getItem('lang') || 'ar';
+    languageToggle.textContent = currentLanguage === 'ar' ? 'en' : 'ar';
+
+    // دالة تحميل المشاريع
+    function loadProjects() {
+    projectsScroll.innerHTML = '';
+    fetch('projects.json')
+        .then(response => response.json())
+        .then(data => {
+            data.projects.forEach(project => {
+                const projectItem = document.createElement('div');
+                projectItem.className = 'project-item';
+                // تخزين اللون الأصلي للمشروع
+                projectItem.dataset.color = project.color;
+                
+                const isDayMode = document.body.classList.contains('light-theme');
+                const nameColor = isDayMode ? '#2E3440' : project.color;
+                
+                projectItem.innerHTML = `
+                    <img src="${project.thumb}" alt="${project.name[currentLanguage]}" draggable="false">
+                    <span style="color: ${nameColor}; transition: color 0.3s ease;">${project.name[currentLanguage]}</span>
+                `;
+                
+                projectItem.addEventListener('click', () => showProject(project));
+                projectsScroll.appendChild(projectItem);
+            });
+        });
+}
+    // دالة عرض تفاصيل المشروع
+    function showProject(project) {
+        const lang = localStorage.getItem('lang') || 'ar';
+        const isDayMode = document.body.classList.contains('light-theme');
+        const containerColor = isDayMode ? '#2E3440' : project.color;
+        
+        projectDisplay.innerHTML = `
+            <div class="edge-left"></div>
+            <div class="edge-right"></div>
+            <div class="project-images">
+                ${project.images.map(img => `
+                    <div class="project-image">
+                        <img src="${img}" alt="${project.name[lang]}">
+                    </div>
+                `).join('')}
+            </div>
+            <div class="scroll-content">
+                <h2 style="color: ${containerColor};">${project.name[lang]}</h2>
+                <p style="color: ${containerColor};">${project.description[lang]}</p>
+                <div class="project-buttons">
+                    <a href="${project.url}" target="_blank" 
+                       style="background-color: ${containerColor}; color: inherit;">
+                        ${lang === 'en' ? 'Visit Website' : 'زيارة الموقع'}
+                    </a>
+                </div>
+            </div>
+        `;
+
+        startSlideshow();
+    }
+
+    // دالة عرض الشرائح التلقائية
+    
+function startSlideshow() {
+    const images = document.querySelectorAll('.project-image');
+    if (!images.length) return;
+
+    let currentIndex = 0;
+    const totalImages = images.length;
+
+    // تهيئة أولية مُحسَّنة
+    const initSlide = () => {
+        images.forEach((img, index) => {
+            img.style.opacity = index === 0 ? '1' : '0';
+            img.classList.toggle('active', index === 0);
+        });
+    };
+
+    // وظيفة العرض مع التحقق من الحدود
+    const showImage = (index) => {
+        if (index < 0) index = totalImages - 1;
+        if (index >= totalImages) index = 0;
+
+        images.forEach(img => {
+            img.style.opacity = '0';
+            img.classList.remove('active');
+        });
+
+        images[index].style.opacity = '1';
+        images[index].classList.add('active');
+        currentIndex = index;
+    };
+
+    // التحكم التلقائي مع إيقاف المؤقت عند عدم التركيز
+    let interval = setInterval(() => showImage(currentIndex + 1), 4000);
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) clearInterval(interval);
+        else interval = setInterval(() => showImage(currentIndex + 1), 4000);
+    });
+
+    // معالجة اللمس مع منع التكرار
+    let isSwiping = false;
+    const handleTouch = (e) => {
+        if (isSwiping) return;
+        isSwiping = true;
+
+        const touchStartX = e.touches[0].clientX;
+        document.ontouchend = (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const deltaX = touchStartX - touchEndX;
+
+            if (Math.abs(deltaX) > 50) {
+                deltaX > 0 ? showImage(currentIndex + 1) : showImage(currentIndex - 1);
+            }
+
+            isSwiping = false;
+        };
+    };
+
+    document.querySelector('.project-images').ontouchstart = handleTouch;
+    initSlide();
+}
+
+
+    // أحداث تبديل اللغة
+    languageToggle.addEventListener('click', () => {
+        currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+        localStorage.setItem('lang', currentLanguage);
+        languageToggle.textContent = currentLanguage === 'ar' ? 'en' : 'ar';
+        loadProjects();
+    });
+
+    // التحميل الأولي
+    loadProjects();
+});
+
+// ============================================================
+// التكامل مع نظام الثيم الرئيسي (يوجد في script.js)
+// ============================================================
+document.getElementById('theme-toggle').addEventListener('click', () => {
+    // هذه الدالة موجودة مسبقًا في نظامك
+    setTimeout(() => {
+        const projectItems = document.querySelectorAll('.project-item');
+        const isDayMode = document.body.classList.contains('light-theme');
+        
+        projectItems.forEach(item => {
+            const color = isDayMode ? '#2E3440' : item.dataset.color;
+            item.querySelector('span').style.color = color;
+        });
+        
+        // تحديث المشروع المعروض إن كان مفتوحًا
+        const activeProject = document.querySelector('.scroll-content');
+        if(activeProject) {
+            // يمكنك استرجاع اللون المناسب من البيانات أو تعيينه حسب الحاجة
+            activeProject.querySelectorAll('h2, p').forEach(el => el.style.color = isDayMode ? '#2E3440' : activeProject.dataset.color);
+            activeProject.querySelector('a').style.backgroundColor = isDayMode ? '#2E3440' : activeProject.dataset.color;
+        }
+    }, 600); // تأخير يتناسب مع مدة الانتقال
+});
+        // تحديث المشروع المعروض إن كان مفتوحًا
+        
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script>
+// المتغيرات العامة
+let fuse = null;
+let cachedResponses = null;
+
+// تهيئة Fuse.js
+function initializeFuse(data) {
+    const options = {
+        keys: ['messages'],
+        includeScore: true,
+        threshold: 0.4,
+        minMatchCharLength: 2,
+        ignoreLocation: true,
+        shouldSort: true,
+        findAllMatches: true,
+        ignoreFieldNorm: true,
+        useExtendedSearch: true
+    };
+    fuse = new Fuse(data, options);
+}
+
+// تحميل الردود
+async function fetchResponses() {
+    try {
+        if (!cachedResponses) {
+            const response = await fetch('responses.json');
+            if (!response.ok) throw new Error('Failed to load responses');
+            cachedResponses = await response.json();
+            initializeFuse(cachedResponses);
+        }
+        return cachedResponses;
+    } catch (error) {
+        console.error('Error loading responses:', error);
+        return [];
+    }
+}
+
+// توحيد المدخلات
+function normalizeInput(input) {
+    return input
+        .trim()
+        .toLowerCase()
+        .replace(/[\u064B-\u065F\u0610-\u061A]/g, '')
+        .replace(/[إأآ]/g, 'ا')
+        .replace(/[ى]/g, 'ي')
+        .replace(/[ة]/g, 'ه')
+        .replace(/[^ء-يa-zA-Z\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+// البحث عن أفضل تطابق
+function findBestMatch(input) {
+    const currentLang = localStorage.getItem('lang') || 'ar';
+    const normalizedInput = normalizeInput(input);
+    
+    if (!fuse) return null;
+
+    const results = fuse.search({
+        $or: [
+            { messages: `^${normalizedInput}` },
+            { messages: `'${normalizedInput}` }
+        ]
+    });
+
+    if (results.length > 0 && results[0].score < 0.4) {
+        const response = results[0].item.response;
+        if (typeof response === 'object') {
+            return response[currentLang] || response['en'] || response['ar'];
+        }
+        return response;
+    }
+    return null;
+}
+
+// تشغيل الصوت (TTS)
+function speak(text) {
+    const currentLang = localStorage.getItem('lang') || 'ar';
+    let speech = new SpeechSynthesisUtterance(text);
+    speech.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.volume = 1;
+    window.speechSynthesis.speak(speech);
+}
+
+// الاستماع إلى الصوت (STT)
+function startListening() {
+    const currentLang = localStorage.getItem('lang') || 'ar';
+    let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+    recognition.lang = currentLang === 'ar' ? 'ar-SA' : 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onresult = function(event) {
+        let userSpeech = event.results[0][0].transcript;
+        document.getElementById('userInput').value = userSpeech;
+        sendMessage(true);
+    };
+
+    recognition.onerror = function(event) {
+        console.error("حدث خطأ في التعرف على الصوت:", event.error);
+    };
+
+    recognition.start();
+}
+
+// إرسال الرسالة
+async function sendMessage(isVoice = false) {
+    try {
+        const userInput = document.getElementById('userInput').value.trim();
+        if (!userInput) return;
+
+        const currentLang = localStorage.getItem('lang') || 'ar';
+        const chatBox = document.getElementById('chatBox');
+        
+        // إضافة رسالة المستخدم
+        chatBox.innerHTML += `<div class="message user">${userInput}</div>`;
+        chatBox.scrollTop = chatBox.scrollHeight;
+        document.getElementById('userInput').value = '';
+
+        await fetchResponses();
+        const bestMatch = findBestMatch(userInput);
+        
+        // معالجة الرد
+        let botResponse = bestMatch || (currentLang === 'ar' 
+            ? "لم أجد إجابة مناسبة لهذا السؤال" 
+            : "I couldn't find a suitable answer for this question");
+
+        setTimeout(() => {
+            chatBox.innerHTML += `<div class="message bot">${botResponse}</div>`;
+            chatBox.scrollTop = chatBox.scrollHeight;
+            if (isVoice) speak(botResponse);
+        }, 500);
+
+    } catch (error) {
+        const currentLang = localStorage.getItem('lang') || 'ar';
+        const errorMessage = currentLang === 'ar' 
+            ? "⚠️ حدث خطأ في النظام" 
+            : "⚠️ System error occurred";
+        document.getElementById('chatBox').innerHTML += 
+            `<div class="message bot error">${errorMessage}</div>`;
+    }
+}
+
+// رسالة الترحيب الأولية
+function showWelcomeMessage() {
+    const currentLang = localStorage.getItem('lang') || 'ar';
+    const chatBox = document.getElementById('chatBox');
+    
+    const welcomeContent = {
+        ar: {
+            hi: "مرحبا بكم 👋",
+            msg: "أنا نيرو, مساعدك الذكي, جرب ان تسألني",
+            examples: {
+                who: "من انت",
+                services: "خدماتك",
+                contact: "تواصل",
+                offers: "عروض"
+            }
+        },
+        en: {
+            hi: "Hi 👋",
+            msg: "I'm Nero, your smart assistant. try asking me",
+            examples: {
+                who: "Who",
+                services: "services",
+                contact: "Contact",
+                offers: "Offers"
+            }
+        }
+    };
+    
+    const langContent = welcomeContent[currentLang] || welcomeContent.ar;
+    
+    chatBox.innerHTML = `
+        <div class="message bot">
+            <h3>${langContent.hi}</h3>
+            <p>${langContent.msg}</p>
+            <div class="examples" id="bot-btn">
+                <a onclick="document.getElementById('userInput').value='${langContent.examples.who}';sendMessage()">${langContent.examples.who}</a>
+                <a onclick="document.getElementById('userInput').value='${langContent.examples.services}';sendMessage()">${langContent.examples.services}</a>
+                <a onclick="document.getElementById('userInput').value='${langContent.examples.contact}';sendMessage()">${langContent.examples.contact}</a>
+                <a onclick="document.getElementById('userInput').value='${langContent.examples.offers}';sendMessage()">${langContent.examples.offers}</a>
+            </div>
+        </div>
+    `;
+}
+
+// أحداث الإدخال
+document.getElementById('userInput').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage(false);
+});
+
+document.getElementById('voice-btn').addEventListener('click', startListening);
+
+// التهيئة الأولية
+window.addEventListener('DOMContentLoaded', async () => {
+    try {
+        await fetchResponses();
+        showWelcomeMessage();
+        document.getElementById('language-toggle').addEventListener('click', showWelcomeMessage);
+    } catch (error) {
+        console.error('خطأ في التهيئة:', error);
+    }
+});
+</script>
+
+
+
+<script src="script.js"></script>
+
+
+
+        
+
+<script>
+    // إزالة حالة preload بعد التحميل
+    window.addEventListener('load', () => {
+        document.body.classList.remove('preload');
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أحمد إسبريسو | مطور ويب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" id="lemon-theme" href="lemon-theme.css">
+     <style>
+    body.preload {
+        transition: none !important;
+    }
+</style>
+</head>
+<body>
+
+    <canvas id="space"></canvas>
+    <canvas id="lemon-canvas"></canvas>
+    
+    <header>
+        <nav>
+            <div >
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="home">الرئيسية</a></li>
+                    <li><a href="projects.html" data-i18n="projects">المشاريع</a></li>
+                    <li><a href="services.html" data-i18n="services">الخدمات</a></li>
+                    <li><a href="aboutme.html" data-i18n="aboutme">من أنا</a></li>
+                    <li><a href="contact.html" data-i18n="contact">تواصل معي</a></li>
+
+                    <div class="controls">
+                        <button id="language-toggle" class="btn">en</button>
+                    </div>
+                    
+                    <div class="controls">
+                        <button id="theme-toggle" class="btn">🌙</button>  
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+<main id="projects">
+    <section  class="projects-sec">
+        <div  class="projects-sec-h1">
+            <h1 data-i18n="projects">المشاريع</h1>
+        <div>
+
+        <div class="content-wrapper" class="container">
+              <div class="projects-grid"></div>
+        </div>
+    </section>
+</main>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const nav = document.querySelector(".light-theme nav");
+            if (!nav) return; // إذا لم يكن هناك نافبار، لا تفعل شيئًا
+          
+            window.addEventListener("scroll", function () {
+              if (window.scrollY > 50) {
+                nav.classList.add("scrolled");
+              } else {
+                nav.classList.remove("scrolled");
+              }
+            });
+          });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    
+
+<script>
+    // إزالة حالة preload بعد التحميل
+    window.addEventListener('load', () => {
+        document.body.classList.remove('preload');
+    });
+</script>
+</body>
+
+</html>
