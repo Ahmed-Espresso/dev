@@ -917,48 +917,28 @@ function initTypingEffect() {
 // إعدادات العد التنازلي الدائم
 // ============================================================
 function initializePermanentCountdown() {
-    // 1. تحديد تاريخ انتهاء العرض (5 أبريل 2025 الساعة 23:59)
-    const targetDate = new Date(2025, 3, 7, 23, 59, 59);
-    
-    // 2. العناصر المطلوبة
+    const targetDate = new Date(2025, 3, 20, 23, 59, 59);
     const daysEl = document.getElementById('offer-days');
     const hoursEl = document.getElementById('offer-hours');
     const minutesEl = document.getElementById('offer-minutes');
     const headerEl = document.querySelector('.offer-header');
+    const separators = document.querySelectorAll('.separator');
     
-    // 3. دالة التحديث الرئيسية
+    let interval; // تعريف متغير المؤقت خارج الدالة
+
     function updateCountdown() {
         const now = new Date();
-        const diff = targetDate - now;
+        let diff = targetDate - now;
         const currentLang = localStorage.getItem('lang') || 'ar';
         
-        // حساب الوقت المتبقي
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-        // تحديث الأرقام
-        daysEl.textContent = days.toString().padStart(2, '0');
-        hoursEl.textContent = hours.toString().padStart(2, '0');
-        minutesEl.textContent = minutes.toString().padStart(2, '0');
-
-        // تحديث التسميات
-        document.querySelectorAll('.time-label').forEach(label => {
-            const key = label.getAttribute('data-i18n');
-            label.textContent = translations[key] || key;
-        });
-
-        // التحكم في الفواصل
-        const separators = document.querySelectorAll('.separator');
-        separators.forEach(sep => {
-            sep.style.visibility = diff > 0 ? 'visible' : 'hidden';
-        });
-
-        // حالة انتهاء العرض
+        // إذا انتهى الوقت، نوقف المؤقت ونعرض الرسالة
         if (diff <= 0) {
+            clearInterval(interval);
             daysEl.textContent = '00';
             hoursEl.textContent = '00';
             minutesEl.textContent = '00';
+            separators.forEach(sep => sep.style.visibility = 'hidden');
+            
             if (headerEl) {
                 headerEl.textContent = currentLang === 'ar' ? 
                     'انتهى العرض' : 
@@ -967,22 +947,30 @@ function initializePermanentCountdown() {
             return;
         }
 
-        // تحديث عنوان العد التنازلي
+        // إذا لم ينته الوقت، نستمر في الحساب
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+        daysEl.textContent = days.toString().padStart(2, '0');
+        hoursEl.textContent = hours.toString().padStart(2, '0');
+        minutesEl.textContent = minutes.toString().padStart(2, '0');
+
+        separators.forEach(sep => sep.style.visibility = 'visible');
+        
         if (headerEl) {
             headerEl.textContent = currentLang === 'ar' ? 
                 'الوقت المتبقي ⏳' : 
-                'remaining ⏳';
+                'Remaining ⏳';
         }
     }
     
-    // 4. التشغيل الأولي والتحديث الدوري
+    // التشغيل الأولي
     updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
+    interval = setInterval(updateCountdown, 1000);
     
-    // 5. تنظيف المؤقت عند إغلاق الصفحة
-    window.addEventListener('beforeunload', () => {
-        clearInterval(interval);
-    });
+    // تنظيف المؤقت عند إغلاق الصفحة
+    window.addEventListener('beforeunload', () => clearInterval(interval));
 }
 
 // 6. استدعاء الدالة عند التحميل وتغيير اللغة
